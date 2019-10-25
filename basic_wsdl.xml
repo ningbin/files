@@ -20,6 +20,10 @@
 
 <wsdl:output>
 
+<soap:body use="literal"/>
+
+</wsdl:output>
+
 
 <wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
