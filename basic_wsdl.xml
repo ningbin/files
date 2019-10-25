@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
 
--<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:prt0="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringWsd/basic" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:prt0="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringWsd/basic" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 
 <wsdl:import namespace="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" location="https://di1aps01.pw.ge.com:443/AdapterMessageMonitoring/basic?wsdl=interface&style=document"/>
 
-
--<wsdl:binding type="prt0:AdapterMessageMonitoringVi" name="basicBinding">
+<wsdl:binding type="prt0:AdapterMessageMonitoringVi" name="basicBinding">
 
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 
 
--<wsdl:operation name="getPredecessorMessageId">
+<wsdl:operation name="getPredecessorMessageId">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
@@ -25,7 +24,7 @@
 +<wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -34,26 +33,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getMessagesWithSuccessors">
+<wsdl:operation name="getMessagesWithSuccessors">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -62,26 +61,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getMessagesByIDs">
+<wsdl:operation name="getMessagesByIDs">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -90,33 +89,33 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="cancelMessages">
+<wsdl:operation name="cancelMessages">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
 </wsdl:fault>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" use="literal"/>
 
@@ -125,26 +124,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getConnections">
+<wsdl:operation name="getConnections">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -153,26 +152,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getInterfaces">
+<wsdl:operation name="getInterfaces">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -181,33 +180,33 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getUserDefinedSearchAttributes">
+<wsdl:operation name="getUserDefinedSearchAttributes">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
 </wsdl:fault>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" use="literal"/>
 
@@ -216,26 +215,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getUserDefinedSearchFilters">
+<wsdl:operation name="getUserDefinedSearchFilters">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -244,26 +243,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getUserDefinedSearchExtractors">
+<wsdl:operation name="getUserDefinedSearchExtractors">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -272,33 +271,33 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getMessageBytesJavaLangStringBoolean">
+<wsdl:operation name="getMessageBytesJavaLangStringBoolean">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
 </wsdl:fault>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" use="literal"/>
 
@@ -307,7 +306,7 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getMessageBytesJavaLangStringIntBoolean">
+<wsdl:operation name="getMessageBytesJavaLangStringIntBoolean">
 
 <soap:operation soapAction=""/>
 
@@ -315,21 +314,21 @@
 +<wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
 </wsdl:fault>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" use="literal"/>
 
@@ -338,26 +337,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getMessageList">
+<wsdl:operation name="getMessageList">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -366,33 +365,33 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getLoggedMessageBytes">
+<wsdl:operation name="getLoggedMessageBytes">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
 </wsdl:fault>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" use="literal"/>
 
@@ -401,26 +400,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getUserDefinedSearchMessages">
+<wsdl:operation name="getUserDefinedSearchMessages">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -429,26 +428,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getMessagesByKeys">
+<wsdl:operation name="getMessagesByKeys">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -457,33 +456,33 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getLogEntries">
+<wsdl:operation name="getLogEntries">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
 </wsdl:fault>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" use="literal"/>
 
@@ -492,26 +491,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getParties">
+<wsdl:operation name="getParties">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -520,26 +519,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getServices">
+<wsdl:operation name="getServices">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -548,33 +547,33 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="resendMessages">
+<wsdl:operation name="resendMessages">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
 </wsdl:fault>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" use="literal"/>
 
@@ -583,26 +582,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getStatusDetails">
+<wsdl:operation name="getStatusDetails">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -611,26 +610,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getAllAvailableStatusDetails">
+<wsdl:operation name="getAllAvailableStatusDetails">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -639,26 +638,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getErrorCodes">
+<wsdl:operation name="getErrorCodes">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -667,26 +666,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="getIntegrationFlows">
+<wsdl:operation name="getIntegrationFlows">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 
@@ -695,26 +694,26 @@
 </wsdl:operation>
 
 
--<wsdl:operation name="failEoioMessage">
+<wsdl:operation name="failEoioMessage">
 
 <soap:operation soapAction=""/>
 
 
--<wsdl:input>
+<wsdl:input>
 
 <soap:body use="literal" parts="parameters"/>
 
 </wsdl:input>
 
 
--<wsdl:output>
+<wsdl:output>
 
 <soap:body use="literal"/>
 
 </wsdl:output>
 
 
--<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
+<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
 
 <soap:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" use="literal"/>
 

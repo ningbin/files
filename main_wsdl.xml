@@ -1,34 +1,14 @@
 <?xml version="1.0"?>
 
--<wsdl:definitions xmlns:tns="urn:AdapterMessageMonitoringWsd" xmlns:p2="urn:AdapterMessageMonitoringWsd/clientCert" xmlns:p1="urn:AdapterMessageMonitoringWsd/ssl" xmlns:p0="urn:AdapterMessageMonitoringWsd/basic" targetNamespace="urn:AdapterMessageMonitoringWsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:tns="urn:AdapterMessageMonitoringWsd" targetNamespace="urn:AdapterMessageMonitoringWsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 
-<wsdl:import namespace="urn:AdapterMessageMonitoringWsd/basic" location="https://di1aps01.pw.ge.com:443/AdapterMessageMonitoring/basic?wsdl=binding&style=document"/>
+<wsdl:import namespace="urn:AdapterMessageMonitoringWsd/basic" location="https://raw.githubusercontent.com/ningbin/files/master/basic_wsdl.xml"/>
 
-<wsdl:import namespace="urn:AdapterMessageMonitoringWsd/ssl" location="https://di1aps01.pw.ge.com:443/AdapterMessageMonitoring/ssl?wsdl=binding&style=document"/>
+<wsdl:service name="AdapterMessageMonitoring">
 
-<wsdl:import namespace="urn:AdapterMessageMonitoringWsd/clientCert" location="https://di1aps01.pw.ge.com:443/AdapterMessageMonitoring/clientCert?wsdl=binding&style=document"/>
-
-
--<wsdl:service name="AdapterMessageMonitoring">
-
-
--<wsdl:port name="basicPort" binding="p0:basicBinding">
+<wsdl:port name="basicPort" binding="p0:basicBinding">
 
 <soap:address location="http://di1aps01.pw.ge.com:50000/AdapterMessageMonitoring/basic?style=document" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
-
-</wsdl:port>
-
-
--<wsdl:port name="sslPort" binding="p1:sslBinding">
-
-<soap:address location="https://di1aps01.pw.ge.com:443/AdapterMessageMonitoring/ssl?style=document" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
-
-</wsdl:port>
-
-
--<wsdl:port name="clientCertPort" binding="p2:clientCertBinding">
-
-<soap:address location="https://di1aps01.pw.ge.com:443/AdapterMessageMonitoring/clientCert?style=document" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
 
 </wsdl:port>
 
