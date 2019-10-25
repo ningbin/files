@@ -21,7 +21,7 @@
 </wsdl:input>
 
 
-+<wsdl:output>
+<wsdl:output>
 
 
 <wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException">
@@ -311,7 +311,7 @@
 <soap:operation soapAction=""/>
 
 
-+<wsdl:input>
+<wsdl:input>
 
 
 <wsdl:output>
