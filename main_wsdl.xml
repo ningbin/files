@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<wsdl:definitions xmlns:tns="urn:AdapterMessageMonitoringWsd" targetNamespace="urn:AdapterMessageMonitoringWsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:tns="urn:AdapterMessageMonitoringWsd" xmlns:p0="urn:AdapterMessageMonitoringWsd/basic" targetNamespace="urn:AdapterMessageMonitoringWsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 
 <wsdl:import namespace="urn:AdapterMessageMonitoringWsd/basic" location="https://raw.githubusercontent.com/ningbin/files/master/basic_wsdl.xml"/>
 

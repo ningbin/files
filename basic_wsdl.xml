@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="urn:AdapterMessageMonitoringWsd/basic" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:prt0="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringWsd/basic" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+<wsdl:binding type="prt0:AdapterMessageMonitoringVi" name="basicBinding">
 
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 
