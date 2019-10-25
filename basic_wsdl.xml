@@ -2,13 +2,6 @@
 
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:prt0="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringWsd/basic" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 
-<wsdl:import namespace="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" location="https://di1aps01.pw.ge.com:443/AdapterMessageMonitoring/basic?wsdl=interface&style=document"/>
-
-<wsdl:binding type="prt0:AdapterMessageMonitoringVi" name="basicBinding">
-
-<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-
-
 <wsdl:operation name="getPredecessorMessageId">
 
 <soap:operation soapAction=""/>
