@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <wsdl:definitions xmlns:tns="urn:AdapterMessageMonitoringWsd" xmlns:p0="urn:AdapterMessageMonitoringWsd/basic" targetNamespace="urn:AdapterMessageMonitoringWsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-<wsdl:import namespace="urn:AdapterMessageMonitoringWsd/basic" location="https://raw.githubusercontent.com/ningbin/files/master/port.xml"/>
-<wsdl:service name="AdapterMessageMonitoring">
-<wsdl:port name="basicPort" binding="p0:basicBinding">
-<soap:address location="http://di1aps01.pw.ge.com:50000/AdapterMessageMonitoring/basic?style=document" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
-</wsdl:port>
-</wsdl:service>
+	<wsdl:import namespace="urn:AdapterMessageMonitoringWsd/basic" location="https://raw.githubusercontent.com/ningbin/files/master/port.xml"/>
+	<wsdl:service name="AdapterMessageMonitoring">
+		<wsdl:port name="basicPort" binding="p0:basicBinding">
+			<soap:address location="http://di1aps01.pw.ge.com:50000/AdapterMessageMonitoring/basic?style=document" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+		</wsdl:port>
+	</wsdl:service>
 </wsdl:definitions>

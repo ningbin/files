@@ -1,2 +1,1201 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<wsdl:definitions xmlns:tns="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:ns1="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:ns0="urn:AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"><wsdl:types><xs:schema xmlns:tns="urn:com.sap.aii.mdt.server.adapterframework.ws.esiext" targetNamespace="urn:com.sap.aii.mdt.server.adapterframework.ws.esiext" xmlns:s2="urn:java/lang" xmlns:s1="urn:com.sap.aii.mdt.api.data" xmlns:s0="urn:com.sap.aii.mdt.api.data.esiext" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="urn:java/lang"/><xs:import namespace="urn:com.sap.aii.mdt.api.data.esiext"/><xs:import namespace="urn:com.sap.aii.mdt.api.data"/><xs:complexType name="WSMessageDataExtImpl"><xs:complexContent><xs:extension base="s0:WSMessageDataExt"><xs:sequence/></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="MessagingSystemFilter"><xs:sequence><xs:element name="archive" type="xs:boolean"/><xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="correlationID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="dateType" type="xs:int"/><xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="fromTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="interface" type="s1:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="messageFormat" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="messageIDs" type="s2:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="nodeId" type="xs:int"/><xs:element name="onlyFaultyMessages" type="xs:boolean"/><xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverParty" type="s1:MessageParty" nillable="true" minOccurs="0"/><xs:element name="referenceIDs" type="s2:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="retries" type="xs:int"/><xs:element name="retryInterval" type="xs:long"/><xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="senderInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="senderParty" type="s1:MessageParty" nillable="true" minOccurs="0"/><xs:element name="sequenceID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="statuses" type="s2:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="timesFailed" type="xs:int"/><xs:element name="toTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="wasEdited" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="MessagingSystemData"><xs:sequence><xs:element name="cancelable" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="credential" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="editable" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="endTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="endpoint" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="headers" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="interface" type="s1:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="isPersistent" type="xs:boolean"/><xs:element name="messageID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="messageKey" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="nodeId" type="xs:int"/><xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverParty" type="s1:MessageParty" nillable="true" minOccurs="0"/><xs:element name="referenceID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="restartable" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="retries" type="xs:int"/><xs:element name="retryInterval" type="xs:long"/><xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="senderInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="senderParty" type="s1:MessageParty" nillable="true" minOccurs="0"/><xs:element name="sequenceNumber" type="xs:long" nillable="true" minOccurs="0"/><xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="startTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="timesFailed" type="xs:long"/><xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="version" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="wasEdited" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="WSMessageFilterExtImpl"><xs:complexContent><xs:extension base="s0:WSMessageFilterExt"><xs:sequence/></xs:extension></xs:complexContent></xs:complexType></xs:schema><xs:schema xmlns:tns="urn:com.sap.aii.mdt.server.adapterframework.ws" targetNamespace="urn:com.sap.aii.mdt.server.adapterframework.ws" xmlns:s2="urn:com.sap.aii.mdt.api.data" xmlns:s1="urn:java/lang" xmlns:s0="urn:com.sap.exception" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="urn:java/lang"/><xs:import namespace="urn:com.sap.exception"/><xs:import namespace="urn:com.sap.aii.mdt.api.data"/><xs:complexType name="OperationFailedException"><xs:complexContent><xs:extension base="s0:BaseException"><xs:sequence><xs:element name="args" type="s1:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="code" type="xs:int"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="AdapterFilter"><xs:sequence><xs:element name="applicationComponent" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="archive" type="xs:boolean"/><xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="correlationID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="dateType" type="xs:int"/><xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="fromTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="interface" type="s2:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="messageFormat" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="messageIDs" type="s1:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="nodeId" type="xs:int"/><xs:element name="onlyFaultyMessages" type="xs:boolean"/><xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverParty" type="s2:MessageParty" nillable="true" minOccurs="0"/><xs:element name="referenceIDs" type="s1:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="retries" type="xs:int"/><xs:element name="retryInterval" type="xs:long"/><xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="senderInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="senderParty" type="s2:MessageParty" nillable="true" minOccurs="0"/><xs:element name="sequenceID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="serviceDefinition" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="softwareComponent" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="statuses" type="s1:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="timesFailed" type="xs:int"/><xs:element name="toTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="wasEdited" type="xs:boolean"/><xs:element name="scenarioIDs" type="s1:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="rootID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="returnLogLocations" type="xs:boolean" nillable="true" minOccurs="0"/><xs:element name="onlyLogLocationsWithPayload" type="xs:boolean" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="AdapterFrameworkData"><xs:sequence><xs:element name="applicationComponent" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="businessMessage" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="cancelable" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="credential" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="editable" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="endTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="endpoint" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="headers" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="interface" type="s2:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="isPersistent" type="xs:boolean"/><xs:element name="messageID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="messageKey" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="nodeId" type="xs:int"/><xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverParty" type="s2:MessageParty" nillable="true" minOccurs="0"/><xs:element name="referenceID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="restartable" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="retries" type="xs:int"/><xs:element name="retryInterval" type="xs:long"/><xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="senderInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/><xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="senderParty" type="s2:MessageParty" nillable="true" minOccurs="0"/><xs:element name="sequenceNumber" type="xs:long" nillable="true" minOccurs="0"/><xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="serviceDefinition" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="softwareComponent" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="startTime" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="timesFailed" type="xs:long"/><xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="version" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="wasEdited" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="businessAttributes" type="tns:ArrayOfBusinessAttribute" nillable="true" minOccurs="0"/><xs:element name="payloadPermissionWarning" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/><xs:element name="errorLabel" type="xs:int"/><xs:element name="scenarioIdentifier" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="parentID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="duration" type="s2:DurationAttribute" nillable="true" minOccurs="0"/><xs:element name="size" type="xs:long" nillable="true" minOccurs="0"/><xs:element name="messagePriority" type="xs:int" nillable="true" minOccurs="0"/><xs:element name="rootID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="sequenceID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="logLocations" type="s1:ArrayOfString" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="AdminActionResultMap"><xs:sequence><xs:element name="keyList" type="s1:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="resultList" type="tns:ArrayOfAdminActionResult" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="AttributeMetadata"><xs:sequence><xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="description" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="BusinessAttribute"><xs:sequence><xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="value" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="IntegrationFlow"><xs:sequence><xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="description" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="id" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="StatusDetail"><xs:sequence><xs:element name="errorLabelID" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="description" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="text" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="Locale"><xs:sequence><xs:element name="language" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="country" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="variant" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="InvalidKeyException"><xs:complexContent><xs:extension base="tns:OperationFailedException"><xs:sequence><xs:element name="messageKey" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="MessageSearchReturnValue"><xs:sequence><xs:element name="date" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="list" type="tns:ArrayOfAdapterFrameworkData" nillable="true" minOccurs="0"/><xs:element name="number" type="xs:int"/><xs:element name="warning" type="xs:boolean"/><xs:element name="displayPermissionWarning" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="AdminActionResult"><xs:sequence><xs:element name="resultCode" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="resultText" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="successful" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfBusinessAttribute"><xs:sequence><xs:element name="BusinessAttribute" type="tns:BusinessAttribute" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfAdminActionResult"><xs:sequence><xs:element name="AdminActionResult" type="tns:AdminActionResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfAdapterFrameworkData"><xs:sequence><xs:element name="AdapterFrameworkData" type="tns:AdapterFrameworkData" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfAttributeMetadata"><xs:sequence><xs:element name="AttributeMetadata" type="tns:AttributeMetadata" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfIntegrationFlow"><xs:sequence><xs:element name="IntegrationFlow" type="tns:IntegrationFlow" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfStatusDetail"><xs:sequence><xs:element name="StatusDetail" type="tns:StatusDetail" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:schema><xs:schema xmlns:tns="urn:java/lang" targetNamespace="urn:java/lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:complexType name="ArrayOfString"><xs:sequence><xs:element name="String" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:schema><xs:schema xmlns:tns="urn:java.lang" targetNamespace="urn:java.lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:complexType name="Comparable"><xs:sequence/></xs:complexType></xs:schema><xs:schema targetNamespace="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:s0="urn:com.sap.aii.mdt.server.adapterframework.ws" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="urn:com.sap.aii.mdt.server.adapterframework.ws"/><xs:element name="getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/><xs:element name="getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/><xs:element name="getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/><xs:element name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/><xs:element name="getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/><xs:element name="getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/><xs:element name="getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/><xs:element name="getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/><xs:element name="failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/></xs:schema><xs:schema xmlns:tns="urn:com.sap.aii.mdt.api.data" targetNamespace="urn:com.sap.aii.mdt.api.data" xmlns:s1="urn:java/lang" xmlns:s0="urn:java.lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="urn:java/lang"/><xs:import namespace="urn:java.lang"/><xs:complexType name="MessageInterface"><xs:complexContent><xs:extension base="tns:AttributeValue"><xs:sequence><xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="namespace" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="senderParty" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="senderComponent" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverParty" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="receiverComponent" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="MessageParty"><xs:complexContent><xs:extension base="tns:AttributeValue"><xs:sequence><xs:element name="agency" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="schema" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="WrapperAttribute"><xs:complexContent><xs:extension base="tns:AttributeValue"><xs:sequence><xs:element name="value" type="s0:Comparable" nillable="true" minOccurs="0"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="BooleanAttribute"><xs:complexContent><xs:extension base="tns:AttributeValue"><xs:sequence><xs:element name="value" type="xs:boolean" nillable="true" minOccurs="0"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="DurationAttribute"><xs:complexContent><xs:extension base="tns:AttributeValue"><xs:sequence><xs:element name="duration" type="xs:long" nillable="true" minOccurs="0"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="AttributeValue"><xs:sequence/></xs:complexType><xs:complexType name="AuditLogEntryData"><xs:sequence><xs:element name="timeStamp" type="xs:dateTime" nillable="true" minOccurs="0"/><xs:element name="textKey" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="params" type="s1:ArrayOfString" nillable="true" minOccurs="0"/><xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="localizedText" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfMessageParty"><xs:sequence><xs:element name="MessageParty" type="tns:MessageParty" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfMessageInterface"><xs:sequence><xs:element name="MessageInterface" type="tns:MessageInterface" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType><xs:complexType name="ArrayOfAuditLogEntryData"><xs:sequence><xs:element name="AuditLogEntryData" type="tns:AuditLogEntryData" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence></xs:complexType></xs:schema><xs:schema xmlns:tns="urn:AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringVi" xmlns:s2="urn:com.sap.aii.mdt.api.data" xmlns:s1="urn:com.sap.aii.mdt.server.adapterframework.ws" xmlns:s0="urn:java/lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:import namespace="urn:java/lang"/><xs:import namespace="urn:com.sap.aii.mdt.api.data"/><xs:import namespace="urn:com.sap.aii.mdt.server.adapterframework.ws"/><xs:element name="getPredecessorMessageId"><xs:complexType><xs:sequence><xs:element name="messageId" type="xs:string" nillable="true"/><xs:element name="direction" type="xs:string" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getPredecessorMessageIdResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="xs:string" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessagesWithSuccessors"><xs:complexType><xs:sequence><xs:element name="messageIds" type="s0:ArrayOfString" nillable="true"/><xs:element name="archive" type="xs:boolean"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessagesWithSuccessorsResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessagesByIDs"><xs:complexType><xs:sequence><xs:element name="messageIds" type="s0:ArrayOfString" nillable="true"/><xs:element name="referenceIds" type="s0:ArrayOfString" nillable="true"/><xs:element name="correlationIds" type="s0:ArrayOfString" nillable="true"/><xs:element name="archive" type="xs:boolean"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessagesByIDsResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="cancelMessages"><xs:complexType><xs:sequence><xs:element name="messageKeys" type="s0:ArrayOfString" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="cancelMessagesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:AdminActionResultMap" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getConnections"><xs:complexType><xs:sequence/></xs:complexType></xs:element><xs:element name="getConnectionsResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s0:ArrayOfString" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getInterfaces"><xs:complexType><xs:sequence/></xs:complexType></xs:element><xs:element name="getInterfacesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s2:ArrayOfMessageInterface" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getUserDefinedSearchAttributes"><xs:complexType><xs:sequence><xs:element name="messageKey" type="xs:string" nillable="true"/><xs:element name="archive" type="xs:boolean"/></xs:sequence></xs:complexType></xs:element><xs:element name="getUserDefinedSearchAttributesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:ArrayOfBusinessAttribute" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getUserDefinedSearchFilters"><xs:complexType><xs:sequence/></xs:complexType></xs:element><xs:element name="getUserDefinedSearchFiltersResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s2:ArrayOfMessageInterface" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getUserDefinedSearchExtractors"><xs:complexType><xs:sequence><xs:element name="name" type="xs:string" nillable="true"/><xs:element name="namespace" type="xs:string" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getUserDefinedSearchExtractorsResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:ArrayOfAttributeMetadata" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessageBytesJavaLangStringBoolean"><xs:complexType><xs:sequence><xs:element name="messageKey" type="xs:string" nillable="true"/><xs:element name="archive" type="xs:boolean"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessageBytesJavaLangStringBooleanResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="xs:base64Binary" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessageBytesJavaLangStringIntBoolean"><xs:complexType><xs:sequence><xs:element name="messageKey" type="xs:string" nillable="true"/><xs:element name="version" type="xs:int"/><xs:element name="archive" type="xs:boolean"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessageBytesJavaLangStringIntBooleanResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="xs:base64Binary" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessageList"><xs:complexType><xs:sequence><xs:element name="filter" type="s1:AdapterFilter" nillable="true"/><xs:element name="maxMessages" type="xs:int" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessageListResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getLoggedMessageBytes"><xs:complexType><xs:sequence><xs:element name="messageKey" type="xs:string" nillable="true"/><xs:element name="version" type="xs:string" nillable="true"/><xs:element name="archive" type="xs:boolean"/></xs:sequence></xs:complexType></xs:element><xs:element name="getLoggedMessageBytesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="xs:base64Binary" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getUserDefinedSearchMessages"><xs:complexType><xs:sequence><xs:element name="filter" type="s1:AdapterFilter" nillable="true"/><xs:element name="maxMessages" type="xs:int" nillable="true" minOccurs="0"/><xs:element name="attributes" type="s1:ArrayOfBusinessAttribute" nillable="true"/><xs:element name="operator" type="xs:string" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getUserDefinedSearchMessagesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessagesByKeys"><xs:complexType><xs:sequence><xs:element name="filter" type="s0:ArrayOfString" nillable="true"/><xs:element name="maxMessages" type="xs:int" nillable="true" minOccurs="0"/></xs:sequence></xs:complexType></xs:element><xs:element name="getMessagesByKeysResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getLogEntries"><xs:complexType><xs:sequence><xs:element name="messageKey" type="xs:string" nillable="true"/><xs:element name="archive" type="xs:boolean"/><xs:element name="maxResults" type="xs:int" minOccurs="0"/><xs:element name="locale" type="s1:Locale" nillable="true" minOccurs="0"/><xs:element name="olderThan" type="xs:dateTime" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getLogEntriesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s2:ArrayOfAuditLogEntryData" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getParties"><xs:complexType><xs:sequence/></xs:complexType></xs:element><xs:element name="getPartiesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s2:ArrayOfMessageParty" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getServices"><xs:complexType><xs:sequence/></xs:complexType></xs:element><xs:element name="getServicesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s0:ArrayOfString" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="resendMessages"><xs:complexType><xs:sequence><xs:element name="messageKeys" type="s0:ArrayOfString" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="resendMessagesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:AdminActionResultMap" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getStatusDetails"><xs:complexType><xs:sequence><xs:element name="errorCodes" type="s0:ArrayOfString" nillable="true"/><xs:element name="locale" type="s1:Locale" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getStatusDetailsResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:ArrayOfStatusDetail" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getAllAvailableStatusDetails"><xs:complexType><xs:sequence><xs:element name="locale" type="s1:Locale" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getAllAvailableStatusDetailsResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:ArrayOfStatusDetail" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getErrorCodes"><xs:complexType><xs:sequence><xs:element name="errorLabelID" type="xs:int" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getErrorCodesResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s0:ArrayOfString" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getIntegrationFlows"><xs:complexType><xs:sequence><xs:element name="language" type="xs:string" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="getIntegrationFlowsResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:ArrayOfIntegrationFlow" nillable="true"/></xs:sequence></xs:complexType></xs:element><xs:element name="failEoioMessage"><xs:complexType><xs:sequence><xs:element name="messageKey" type="xs:string" nillable="true"/><xs:element name="retriggerSuccessor" type="xs:boolean"/></xs:sequence></xs:complexType></xs:element><xs:element name="failEoioMessageResponse"><xs:complexType><xs:sequence><xs:element name="Response" type="s1:AdminActionResult" nillable="true"/></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema xmlns:tns="urn:com.sap.exception" targetNamespace="urn:com.sap.exception" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:complexType name="BaseException"><xs:sequence/></xs:complexType></xs:schema><xs:schema xmlns:tns="urn:com.sap.aii.mdt.api.data.esiext" targetNamespace="urn:com.sap.aii.mdt.api.data.esiext" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:complexType name="MessageFilterExt"><xs:sequence/></xs:complexType><xs:complexType name="WSMessageDataExt"><xs:complexContent><xs:extension base="tns:MessageDataExt"><xs:sequence/></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="WSMessageFilterExt"><xs:complexContent><xs:extension base="tns:MessageFilterExt"><xs:sequence><xs:element name="applicationComponent" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="serviceDefinition" type="xs:string" nillable="true" minOccurs="0"/><xs:element name="softwareComponent" type="xs:string" nillable="true" minOccurs="0"/></xs:sequence></xs:extension></xs:complexContent></xs:complexType><xs:complexType name="MessageDataExt"><xs:sequence/></xs:complexType></xs:schema></wsdl:types><wsdl:message name="getPredecessorMessageIdIn_doc"><wsdl:part name="parameters" element="ns0:getPredecessorMessageId"/></wsdl:message><wsdl:message name="getPredecessorMessageIdOut_doc"><wsdl:part name="parameters" element="ns0:getPredecessorMessageIdResponse"/></wsdl:message><wsdl:message name="getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getMessagesWithSuccessorsIn_doc"><wsdl:part name="parameters" element="ns0:getMessagesWithSuccessors"/></wsdl:message><wsdl:message name="getMessagesWithSuccessorsOut_doc"><wsdl:part name="parameters" element="ns0:getMessagesWithSuccessorsResponse"/></wsdl:message><wsdl:message name="getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getMessagesByIDsIn_doc"><wsdl:part name="parameters" element="ns0:getMessagesByIDs"/></wsdl:message><wsdl:message name="getMessagesByIDsOut_doc"><wsdl:part name="parameters" element="ns0:getMessagesByIDsResponse"/></wsdl:message><wsdl:message name="getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="cancelMessagesIn_doc"><wsdl:part name="parameters" element="ns0:cancelMessages"/></wsdl:message><wsdl:message name="cancelMessagesOut_doc"><wsdl:part name="parameters" element="ns0:cancelMessagesResponse"/></wsdl:message><wsdl:message name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"><wsdl:part name="errorPart" element="ns1:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/></wsdl:message><wsdl:message name="getConnectionsIn_doc"><wsdl:part name="parameters" element="ns0:getConnections"/></wsdl:message><wsdl:message name="getConnectionsOut_doc"><wsdl:part name="parameters" element="ns0:getConnectionsResponse"/></wsdl:message><wsdl:message name="getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getInterfacesIn_doc"><wsdl:part name="parameters" element="ns0:getInterfaces"/></wsdl:message><wsdl:message name="getInterfacesOut_doc"><wsdl:part name="parameters" element="ns0:getInterfacesResponse"/></wsdl:message><wsdl:message name="getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getUserDefinedSearchAttributesIn_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchAttributes"/></wsdl:message><wsdl:message name="getUserDefinedSearchAttributesOut_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchAttributesResponse"/></wsdl:message><wsdl:message name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"><wsdl:part name="errorPart" element="ns1:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/></wsdl:message><wsdl:message name="getUserDefinedSearchFiltersIn_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchFilters"/></wsdl:message><wsdl:message name="getUserDefinedSearchFiltersOut_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchFiltersResponse"/></wsdl:message><wsdl:message name="getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getUserDefinedSearchExtractorsIn_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchExtractors"/></wsdl:message><wsdl:message name="getUserDefinedSearchExtractorsOut_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchExtractorsResponse"/></wsdl:message><wsdl:message name="getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringBooleanIn_doc"><wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringBoolean"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringBooleanOut_doc"><wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringBooleanResponse"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"><wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringIntBooleanIn_doc"><wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringIntBoolean"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringIntBooleanOut_doc"><wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringIntBooleanResponse"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"><wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/></wsdl:message><wsdl:message name="getMessageListIn_doc"><wsdl:part name="parameters" element="ns0:getMessageList"/></wsdl:message><wsdl:message name="getMessageListOut_doc"><wsdl:part name="parameters" element="ns0:getMessageListResponse"/></wsdl:message><wsdl:message name="getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getLoggedMessageBytesIn_doc"><wsdl:part name="parameters" element="ns0:getLoggedMessageBytes"/></wsdl:message><wsdl:message name="getLoggedMessageBytesOut_doc"><wsdl:part name="parameters" element="ns0:getLoggedMessageBytesResponse"/></wsdl:message><wsdl:message name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"><wsdl:part name="errorPart" element="ns1:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/></wsdl:message><wsdl:message name="getUserDefinedSearchMessagesIn_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchMessages"/></wsdl:message><wsdl:message name="getUserDefinedSearchMessagesOut_doc"><wsdl:part name="parameters" element="ns0:getUserDefinedSearchMessagesResponse"/></wsdl:message><wsdl:message name="getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getMessagesByKeysIn_doc"><wsdl:part name="parameters" element="ns0:getMessagesByKeys"/></wsdl:message><wsdl:message name="getMessagesByKeysOut_doc"><wsdl:part name="parameters" element="ns0:getMessagesByKeysResponse"/></wsdl:message><wsdl:message name="getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getLogEntriesIn_doc"><wsdl:part name="parameters" element="ns0:getLogEntries"/></wsdl:message><wsdl:message name="getLogEntriesOut_doc"><wsdl:part name="parameters" element="ns0:getLogEntriesResponse"/></wsdl:message><wsdl:message name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"><wsdl:part name="errorPart" element="ns1:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/></wsdl:message><wsdl:message name="getPartiesIn_doc"><wsdl:part name="parameters" element="ns0:getParties"/></wsdl:message><wsdl:message name="getPartiesOut_doc"><wsdl:part name="parameters" element="ns0:getPartiesResponse"/></wsdl:message><wsdl:message name="getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getServicesIn_doc"><wsdl:part name="parameters" element="ns0:getServices"/></wsdl:message><wsdl:message name="getServicesOut_doc"><wsdl:part name="parameters" element="ns0:getServicesResponse"/></wsdl:message><wsdl:message name="getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="resendMessagesIn_doc"><wsdl:part name="parameters" element="ns0:resendMessages"/></wsdl:message><wsdl:message name="resendMessagesOut_doc"><wsdl:part name="parameters" element="ns0:resendMessagesResponse"/></wsdl:message><wsdl:message name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"><wsdl:part name="errorPart" element="ns1:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/></wsdl:message><wsdl:message name="getStatusDetailsIn_doc"><wsdl:part name="parameters" element="ns0:getStatusDetails"/></wsdl:message><wsdl:message name="getStatusDetailsOut_doc"><wsdl:part name="parameters" element="ns0:getStatusDetailsResponse"/></wsdl:message><wsdl:message name="getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getAllAvailableStatusDetailsIn_doc"><wsdl:part name="parameters" element="ns0:getAllAvailableStatusDetails"/></wsdl:message><wsdl:message name="getAllAvailableStatusDetailsOut_doc"><wsdl:part name="parameters" element="ns0:getAllAvailableStatusDetailsResponse"/></wsdl:message><wsdl:message name="getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getErrorCodesIn_doc"><wsdl:part name="parameters" element="ns0:getErrorCodes"/></wsdl:message><wsdl:message name="getErrorCodesOut_doc"><wsdl:part name="parameters" element="ns0:getErrorCodesResponse"/></wsdl:message><wsdl:message name="getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="getIntegrationFlowsIn_doc"><wsdl:part name="parameters" element="ns0:getIntegrationFlows"/></wsdl:message><wsdl:message name="getIntegrationFlowsOut_doc"><wsdl:part name="parameters" element="ns0:getIntegrationFlowsResponse"/></wsdl:message><wsdl:message name="getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:message name="failEoioMessageIn_doc"><wsdl:part name="parameters" element="ns0:failEoioMessage"/></wsdl:message><wsdl:message name="failEoioMessageOut_doc"><wsdl:part name="parameters" element="ns0:failEoioMessageResponse"/></wsdl:message><wsdl:message name="failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"><wsdl:part name="errorPart" element="ns1:failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/></wsdl:message><wsdl:portType name="AdapterMessageMonitoringVi"><wsdl:operation name="getPredecessorMessageId"><wsdl:input message="tns:getPredecessorMessageIdIn_doc"/><wsdl:output message="tns:getPredecessorMessageIdOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getMessagesWithSuccessors"><wsdl:input message="tns:getMessagesWithSuccessorsIn_doc"/><wsdl:output message="tns:getMessagesWithSuccessorsOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getMessagesByIDs"><wsdl:input message="tns:getMessagesByIDsIn_doc"/><wsdl:output message="tns:getMessagesByIDsOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="cancelMessages"><wsdl:input message="tns:cancelMessagesIn_doc"/><wsdl:output message="tns:cancelMessagesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/></wsdl:operation><wsdl:operation name="getConnections"><wsdl:input message="tns:getConnectionsIn_doc"/><wsdl:output message="tns:getConnectionsOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getInterfaces"><wsdl:input message="tns:getInterfacesIn_doc"/><wsdl:output message="tns:getInterfacesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getUserDefinedSearchAttributes"><wsdl:input message="tns:getUserDefinedSearchAttributesIn_doc"/><wsdl:output message="tns:getUserDefinedSearchAttributesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/></wsdl:operation><wsdl:operation name="getUserDefinedSearchFilters"><wsdl:input message="tns:getUserDefinedSearchFiltersIn_doc"/><wsdl:output message="tns:getUserDefinedSearchFiltersOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getUserDefinedSearchExtractors"><wsdl:input message="tns:getUserDefinedSearchExtractorsIn_doc"/><wsdl:output message="tns:getUserDefinedSearchExtractorsOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getMessageBytesJavaLangStringBoolean"><wsdl:input message="tns:getMessageBytesJavaLangStringBooleanIn_doc"/><wsdl:output message="tns:getMessageBytesJavaLangStringBooleanOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/></wsdl:operation><wsdl:operation name="getMessageBytesJavaLangStringIntBoolean"><wsdl:input message="tns:getMessageBytesJavaLangStringIntBooleanIn_doc"/><wsdl:output message="tns:getMessageBytesJavaLangStringIntBooleanOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/></wsdl:operation><wsdl:operation name="getMessageList"><wsdl:input message="tns:getMessageListIn_doc"/><wsdl:output message="tns:getMessageListOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getLoggedMessageBytes"><wsdl:input message="tns:getLoggedMessageBytesIn_doc"/><wsdl:output message="tns:getLoggedMessageBytesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/></wsdl:operation><wsdl:operation name="getUserDefinedSearchMessages"><wsdl:input message="tns:getUserDefinedSearchMessagesIn_doc"/><wsdl:output message="tns:getUserDefinedSearchMessagesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getMessagesByKeys"><wsdl:input message="tns:getMessagesByKeysIn_doc"/><wsdl:output message="tns:getMessagesByKeysOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getLogEntries"><wsdl:input message="tns:getLogEntriesIn_doc"/><wsdl:output message="tns:getLogEntriesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/></wsdl:operation><wsdl:operation name="getParties"><wsdl:input message="tns:getPartiesIn_doc"/><wsdl:output message="tns:getPartiesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getServices"><wsdl:input message="tns:getServicesIn_doc"/><wsdl:output message="tns:getServicesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="resendMessages"><wsdl:input message="tns:resendMessagesIn_doc"/><wsdl:output message="tns:resendMessagesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/></wsdl:operation><wsdl:operation name="getStatusDetails"><wsdl:input message="tns:getStatusDetailsIn_doc"/><wsdl:output message="tns:getStatusDetailsOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getAllAvailableStatusDetails"><wsdl:input message="tns:getAllAvailableStatusDetailsIn_doc"/><wsdl:output message="tns:getAllAvailableStatusDetailsOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getErrorCodes"><wsdl:input message="tns:getErrorCodesIn_doc"/><wsdl:output message="tns:getErrorCodesOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="getIntegrationFlows"><wsdl:input message="tns:getIntegrationFlowsIn_doc"/><wsdl:output message="tns:getIntegrationFlowsOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation><wsdl:operation name="failEoioMessage"><wsdl:input message="tns:failEoioMessageIn_doc"/><wsdl:output message="tns:failEoioMessageOut_doc"/><wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/></wsdl:operation></wsdl:portType></wsdl:definitions>
+<wsdl:definitions xmlns:tns="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:ns1="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:ns0="urn:AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:types>
+		<xs:schema xmlns:tns="urn:com.sap.aii.mdt.server.adapterframework.ws.esiext" targetNamespace="urn:com.sap.aii.mdt.server.adapterframework.ws.esiext" xmlns:s2="urn:java/lang" xmlns:s1="urn:com.sap.aii.mdt.api.data" xmlns:s0="urn:com.sap.aii.mdt.api.data.esiext" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="urn:java/lang"/>
+			<xs:import namespace="urn:com.sap.aii.mdt.api.data.esiext"/>
+			<xs:import namespace="urn:com.sap.aii.mdt.api.data"/>
+			<xs:complexType name="WSMessageDataExtImpl">
+				<xs:complexContent>
+					<xs:extension base="s0:WSMessageDataExt">
+						<xs:sequence/>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="MessagingSystemFilter">
+				<xs:sequence>
+					<xs:element name="archive" type="xs:boolean"/>
+					<xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="correlationID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="dateType" type="xs:int"/>
+					<xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="fromTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="interface" type="s1:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="messageFormat" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="messageIDs" type="s2:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="nodeId" type="xs:int"/>
+					<xs:element name="onlyFaultyMessages" type="xs:boolean"/>
+					<xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverParty" type="s1:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="referenceIDs" type="s2:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="retries" type="xs:int"/>
+					<xs:element name="retryInterval" type="xs:long"/>
+					<xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="senderInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="senderParty" type="s1:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="sequenceID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="statuses" type="s2:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="timesFailed" type="xs:int"/>
+					<xs:element name="toTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="wasEdited" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="MessagingSystemData">
+				<xs:sequence>
+					<xs:element name="cancelable" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="credential" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="editable" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="endTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="endpoint" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="headers" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="interface" type="s1:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="isPersistent" type="xs:boolean"/>
+					<xs:element name="messageID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="messageKey" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="nodeId" type="xs:int"/>
+					<xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverParty" type="s1:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="referenceID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="restartable" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="retries" type="xs:int"/>
+					<xs:element name="retryInterval" type="xs:long"/>
+					<xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="senderInterface" type="s1:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="senderParty" type="s1:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="sequenceNumber" type="xs:long" nillable="true" minOccurs="0"/>
+					<xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="startTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="timesFailed" type="xs:long"/>
+					<xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="version" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="wasEdited" type="s1:BooleanAttribute" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="WSMessageFilterExtImpl">
+				<xs:complexContent>
+					<xs:extension base="s0:WSMessageFilterExt">
+						<xs:sequence/>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:tns="urn:com.sap.aii.mdt.server.adapterframework.ws" targetNamespace="urn:com.sap.aii.mdt.server.adapterframework.ws" xmlns:s2="urn:com.sap.aii.mdt.api.data" xmlns:s1="urn:java/lang" xmlns:s0="urn:com.sap.exception" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="urn:java/lang"/>
+			<xs:import namespace="urn:com.sap.exception"/>
+			<xs:import namespace="urn:com.sap.aii.mdt.api.data"/>
+			<xs:complexType name="OperationFailedException">
+				<xs:complexContent>
+					<xs:extension base="s0:BaseException">
+						<xs:sequence>
+							<xs:element name="args" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+							<xs:element name="code" type="xs:int"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="AdapterFilter">
+				<xs:sequence>
+					<xs:element name="applicationComponent" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="archive" type="xs:boolean"/>
+					<xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="correlationID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="dateType" type="xs:int"/>
+					<xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="fromTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="interface" type="s2:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="messageFormat" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="messageIDs" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="nodeId" type="xs:int"/>
+					<xs:element name="onlyFaultyMessages" type="xs:boolean"/>
+					<xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverParty" type="s2:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="referenceIDs" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="retries" type="xs:int"/>
+					<xs:element name="retryInterval" type="xs:long"/>
+					<xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="senderInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="senderParty" type="s2:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="sequenceID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="serviceDefinition" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="softwareComponent" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="statuses" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="timesFailed" type="xs:int"/>
+					<xs:element name="toTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="wasEdited" type="xs:boolean"/>
+					<xs:element name="scenarioIDs" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="rootID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="returnLogLocations" type="xs:boolean" nillable="true" minOccurs="0"/>
+					<xs:element name="onlyLogLocationsWithPayload" type="xs:boolean" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="AdapterFrameworkData">
+				<xs:sequence>
+					<xs:element name="applicationComponent" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="businessMessage" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="cancelable" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="connectionName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="credential" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="direction" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="editable" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="endTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="endpoint" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCategory" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="errorCode" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="headers" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="interface" type="s2:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="isPersistent" type="xs:boolean"/>
+					<xs:element name="messageID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="messageKey" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="messageType" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="nodeId" type="xs:int"/>
+					<xs:element name="persistUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="protocol" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="qualityOfService" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="receiverParty" type="s2:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="referenceID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="restartable" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="retries" type="xs:int"/>
+					<xs:element name="retryInterval" type="xs:long"/>
+					<xs:element name="scheduleTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="senderInterface" type="s2:MessageInterface" nillable="true" minOccurs="0"/>
+					<xs:element name="senderName" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="senderParty" type="s2:MessageParty" nillable="true" minOccurs="0"/>
+					<xs:element name="sequenceNumber" type="xs:long" nillable="true" minOccurs="0"/>
+					<xs:element name="serializationContext" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="serviceDefinition" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="softwareComponent" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="startTime" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="timesFailed" type="xs:long"/>
+					<xs:element name="transport" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="validUntil" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="version" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="wasEdited" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="businessAttributes" type="tns:ArrayOfBusinessAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="payloadPermissionWarning" type="s2:BooleanAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="errorLabel" type="xs:int"/>
+					<xs:element name="scenarioIdentifier" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="parentID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="duration" type="s2:DurationAttribute" nillable="true" minOccurs="0"/>
+					<xs:element name="size" type="xs:long" nillable="true" minOccurs="0"/>
+					<xs:element name="messagePriority" type="xs:int" nillable="true" minOccurs="0"/>
+					<xs:element name="rootID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="sequenceID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="logLocations" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="AdminActionResultMap">
+				<xs:sequence>
+					<xs:element name="keyList" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="resultList" type="tns:ArrayOfAdminActionResult" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="AttributeMetadata">
+				<xs:sequence>
+					<xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="description" type="xs:string" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="BusinessAttribute">
+				<xs:sequence>
+					<xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="value" type="xs:string" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="IntegrationFlow">
+				<xs:sequence>
+					<xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="description" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="id" type="xs:string" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="StatusDetail">
+				<xs:sequence>
+					<xs:element name="errorLabelID" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="description" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="text" type="xs:string" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Locale">
+				<xs:sequence>
+					<xs:element name="language" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="country" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="variant" type="xs:string" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="InvalidKeyException">
+				<xs:complexContent>
+					<xs:extension base="tns:OperationFailedException">
+						<xs:sequence>
+							<xs:element name="messageKey" type="xs:string" nillable="true" minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="MessageSearchReturnValue">
+				<xs:sequence>
+					<xs:element name="date" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="list" type="tns:ArrayOfAdapterFrameworkData" nillable="true" minOccurs="0"/>
+					<xs:element name="number" type="xs:int"/>
+					<xs:element name="warning" type="xs:boolean"/>
+					<xs:element name="displayPermissionWarning" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="AdminActionResult">
+				<xs:sequence>
+					<xs:element name="resultCode" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="resultText" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="successful" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfBusinessAttribute">
+				<xs:sequence>
+					<xs:element name="BusinessAttribute" type="tns:BusinessAttribute" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfAdminActionResult">
+				<xs:sequence>
+					<xs:element name="AdminActionResult" type="tns:AdminActionResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfAdapterFrameworkData">
+				<xs:sequence>
+					<xs:element name="AdapterFrameworkData" type="tns:AdapterFrameworkData" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfAttributeMetadata">
+				<xs:sequence>
+					<xs:element name="AttributeMetadata" type="tns:AttributeMetadata" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfIntegrationFlow">
+				<xs:sequence>
+					<xs:element name="IntegrationFlow" type="tns:IntegrationFlow" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfStatusDetail">
+				<xs:sequence>
+					<xs:element name="StatusDetail" type="tns:StatusDetail" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:tns="urn:java/lang" targetNamespace="urn:java/lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:complexType name="ArrayOfString">
+				<xs:sequence>
+					<xs:element name="String" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:tns="urn:java.lang" targetNamespace="urn:java.lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:complexType name="Comparable">
+				<xs:sequence/>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema targetNamespace="urn:AdapterMessageMonitoringWsd/AdapterMessageMonitoringVi" xmlns:s0="urn:com.sap.aii.mdt.server.adapterframework.ws" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="urn:com.sap.aii.mdt.server.adapterframework.ws"/>
+			<xs:element name="getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/>
+			<xs:element name="getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/>
+			<xs:element name="getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/>
+			<xs:element name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/>
+			<xs:element name="getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/>
+			<xs:element name="getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/>
+			<xs:element name="getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" type="s0:InvalidKeyException"/>
+			<xs:element name="getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+			<xs:element name="failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" type="s0:OperationFailedException"/>
+		</xs:schema>
+		<xs:schema xmlns:tns="urn:com.sap.aii.mdt.api.data" targetNamespace="urn:com.sap.aii.mdt.api.data" xmlns:s1="urn:java/lang" xmlns:s0="urn:java.lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="urn:java/lang"/>
+			<xs:import namespace="urn:java.lang"/>
+			<xs:complexType name="MessageInterface">
+				<xs:complexContent>
+					<xs:extension base="tns:AttributeValue">
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="namespace" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="senderParty" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="senderComponent" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="receiverParty" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="receiverComponent" type="xs:string" nillable="true" minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="MessageParty">
+				<xs:complexContent>
+					<xs:extension base="tns:AttributeValue">
+						<xs:sequence>
+							<xs:element name="agency" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="name" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="schema" type="xs:string" nillable="true" minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="WrapperAttribute">
+				<xs:complexContent>
+					<xs:extension base="tns:AttributeValue">
+						<xs:sequence>
+							<xs:element name="value" type="s0:Comparable" nillable="true" minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="BooleanAttribute">
+				<xs:complexContent>
+					<xs:extension base="tns:AttributeValue">
+						<xs:sequence>
+							<xs:element name="value" type="xs:boolean" nillable="true" minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="DurationAttribute">
+				<xs:complexContent>
+					<xs:extension base="tns:AttributeValue">
+						<xs:sequence>
+							<xs:element name="duration" type="xs:long" nillable="true" minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="AttributeValue">
+				<xs:sequence/>
+			</xs:complexType>
+			<xs:complexType name="AuditLogEntryData">
+				<xs:sequence>
+					<xs:element name="timeStamp" type="xs:dateTime" nillable="true" minOccurs="0"/>
+					<xs:element name="textKey" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="params" type="s1:ArrayOfString" nillable="true" minOccurs="0"/>
+					<xs:element name="status" type="xs:string" nillable="true" minOccurs="0"/>
+					<xs:element name="localizedText" type="xs:string" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfMessageParty">
+				<xs:sequence>
+					<xs:element name="MessageParty" type="tns:MessageParty" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfMessageInterface">
+				<xs:sequence>
+					<xs:element name="MessageInterface" type="tns:MessageInterface" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ArrayOfAuditLogEntryData">
+				<xs:sequence>
+					<xs:element name="AuditLogEntryData" type="tns:AuditLogEntryData" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:tns="urn:AdapterMessageMonitoringVi" targetNamespace="urn:AdapterMessageMonitoringVi" xmlns:s2="urn:com.sap.aii.mdt.api.data" xmlns:s1="urn:com.sap.aii.mdt.server.adapterframework.ws" xmlns:s0="urn:java/lang" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="urn:java/lang"/>
+			<xs:import namespace="urn:com.sap.aii.mdt.api.data"/>
+			<xs:import namespace="urn:com.sap.aii.mdt.server.adapterframework.ws"/>
+			<xs:element name="getPredecessorMessageId">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageId" type="xs:string" nillable="true"/>
+						<xs:element name="direction" type="xs:string" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPredecessorMessageIdResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="xs:string" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessagesWithSuccessors">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageIds" type="s0:ArrayOfString" nillable="true"/>
+						<xs:element name="archive" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessagesWithSuccessorsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessagesByIDs">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageIds" type="s0:ArrayOfString" nillable="true"/>
+						<xs:element name="referenceIds" type="s0:ArrayOfString" nillable="true"/>
+						<xs:element name="correlationIds" type="s0:ArrayOfString" nillable="true"/>
+						<xs:element name="archive" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessagesByIDsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cancelMessages">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKeys" type="s0:ArrayOfString" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cancelMessagesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:AdminActionResultMap" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getConnections">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getConnectionsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s0:ArrayOfString" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInterfaces">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getInterfacesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s2:ArrayOfMessageInterface" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchAttributes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKey" type="xs:string" nillable="true"/>
+						<xs:element name="archive" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchAttributesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:ArrayOfBusinessAttribute" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchFilters">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchFiltersResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s2:ArrayOfMessageInterface" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchExtractors">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string" nillable="true"/>
+						<xs:element name="namespace" type="xs:string" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchExtractorsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:ArrayOfAttributeMetadata" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessageBytesJavaLangStringBoolean">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKey" type="xs:string" nillable="true"/>
+						<xs:element name="archive" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessageBytesJavaLangStringBooleanResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="xs:base64Binary" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessageBytesJavaLangStringIntBoolean">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKey" type="xs:string" nillable="true"/>
+						<xs:element name="version" type="xs:int"/>
+						<xs:element name="archive" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessageBytesJavaLangStringIntBooleanResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="xs:base64Binary" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessageList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="filter" type="s1:AdapterFilter" nillable="true"/>
+						<xs:element name="maxMessages" type="xs:int" nillable="true" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessageListResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLoggedMessageBytes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKey" type="xs:string" nillable="true"/>
+						<xs:element name="version" type="xs:string" nillable="true"/>
+						<xs:element name="archive" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLoggedMessageBytesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="xs:base64Binary" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchMessages">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="filter" type="s1:AdapterFilter" nillable="true"/>
+						<xs:element name="maxMessages" type="xs:int" nillable="true" minOccurs="0"/>
+						<xs:element name="attributes" type="s1:ArrayOfBusinessAttribute" nillable="true"/>
+						<xs:element name="operator" type="xs:string" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getUserDefinedSearchMessagesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessagesByKeys">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="filter" type="s0:ArrayOfString" nillable="true"/>
+						<xs:element name="maxMessages" type="xs:int" nillable="true" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getMessagesByKeysResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:MessageSearchReturnValue" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLogEntries">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKey" type="xs:string" nillable="true"/>
+						<xs:element name="archive" type="xs:boolean"/>
+						<xs:element name="maxResults" type="xs:int" minOccurs="0"/>
+						<xs:element name="locale" type="s1:Locale" nillable="true" minOccurs="0"/>
+						<xs:element name="olderThan" type="xs:dateTime" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getLogEntriesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s2:ArrayOfAuditLogEntryData" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getParties">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getPartiesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s2:ArrayOfMessageParty" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getServices">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getServicesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s0:ArrayOfString" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="resendMessages">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKeys" type="s0:ArrayOfString" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="resendMessagesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:AdminActionResultMap" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getStatusDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="errorCodes" type="s0:ArrayOfString" nillable="true"/>
+						<xs:element name="locale" type="s1:Locale" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getStatusDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:ArrayOfStatusDetail" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getAllAvailableStatusDetails">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="locale" type="s1:Locale" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getAllAvailableStatusDetailsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:ArrayOfStatusDetail" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getErrorCodes">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="errorLabelID" type="xs:int" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getErrorCodesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s0:ArrayOfString" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getIntegrationFlows">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="language" type="xs:string" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getIntegrationFlowsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:ArrayOfIntegrationFlow" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="failEoioMessage">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="messageKey" type="xs:string" nillable="true"/>
+						<xs:element name="retriggerSuccessor" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="failEoioMessageResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Response" type="s1:AdminActionResult" nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema xmlns:tns="urn:com.sap.exception" targetNamespace="urn:com.sap.exception" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:complexType name="BaseException">
+				<xs:sequence/>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:tns="urn:com.sap.aii.mdt.api.data.esiext" targetNamespace="urn:com.sap.aii.mdt.api.data.esiext" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:complexType name="MessageFilterExt">
+				<xs:sequence/>
+			</xs:complexType>
+			<xs:complexType name="WSMessageDataExt">
+				<xs:complexContent>
+					<xs:extension base="tns:MessageDataExt">
+						<xs:sequence/>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="WSMessageFilterExt">
+				<xs:complexContent>
+					<xs:extension base="tns:MessageFilterExt">
+						<xs:sequence>
+							<xs:element name="applicationComponent" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="serviceDefinition" type="xs:string" nillable="true" minOccurs="0"/>
+							<xs:element name="softwareComponent" type="xs:string" nillable="true" minOccurs="0"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="MessageDataExt">
+				<xs:sequence/>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="getPredecessorMessageIdIn_doc">
+		<wsdl:part name="parameters" element="ns0:getPredecessorMessageId"/>
+	</wsdl:message>
+	<wsdl:message name="getPredecessorMessageIdOut_doc">
+		<wsdl:part name="parameters" element="ns0:getPredecessorMessageIdResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesWithSuccessorsIn_doc">
+		<wsdl:part name="parameters" element="ns0:getMessagesWithSuccessors"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesWithSuccessorsOut_doc">
+		<wsdl:part name="parameters" element="ns0:getMessagesWithSuccessorsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesByIDsIn_doc">
+		<wsdl:part name="parameters" element="ns0:getMessagesByIDs"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesByIDsOut_doc">
+		<wsdl:part name="parameters" element="ns0:getMessagesByIDsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="cancelMessagesIn_doc">
+		<wsdl:part name="parameters" element="ns0:cancelMessages"/>
+	</wsdl:message>
+	<wsdl:message name="cancelMessagesOut_doc">
+		<wsdl:part name="parameters" element="ns0:cancelMessagesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc">
+		<wsdl:part name="errorPart" element="ns1:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/>
+	</wsdl:message>
+	<wsdl:message name="getConnectionsIn_doc">
+		<wsdl:part name="parameters" element="ns0:getConnections"/>
+	</wsdl:message>
+	<wsdl:message name="getConnectionsOut_doc">
+		<wsdl:part name="parameters" element="ns0:getConnectionsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getInterfacesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getInterfaces"/>
+	</wsdl:message>
+	<wsdl:message name="getInterfacesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getInterfacesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchAttributesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchAttributes"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchAttributesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchAttributesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc">
+		<wsdl:part name="errorPart" element="ns1:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchFiltersIn_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchFilters"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchFiltersOut_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchFiltersResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchExtractorsIn_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchExtractors"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchExtractorsOut_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchExtractorsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringBooleanIn_doc">
+		<wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringBoolean"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringBooleanOut_doc">
+		<wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringBooleanResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringIntBooleanIn_doc">
+		<wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringIntBoolean"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringIntBooleanOut_doc">
+		<wsdl:part name="parameters" element="ns0:getMessageBytesJavaLangStringIntBooleanResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageListIn_doc">
+		<wsdl:part name="parameters" element="ns0:getMessageList"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageListOut_doc">
+		<wsdl:part name="parameters" element="ns0:getMessageListResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getLoggedMessageBytesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getLoggedMessageBytes"/>
+	</wsdl:message>
+	<wsdl:message name="getLoggedMessageBytesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getLoggedMessageBytesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc">
+		<wsdl:part name="errorPart" element="ns1:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchMessagesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchMessages"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchMessagesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getUserDefinedSearchMessagesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesByKeysIn_doc">
+		<wsdl:part name="parameters" element="ns0:getMessagesByKeys"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesByKeysOut_doc">
+		<wsdl:part name="parameters" element="ns0:getMessagesByKeysResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getLogEntriesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getLogEntries"/>
+	</wsdl:message>
+	<wsdl:message name="getLogEntriesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getLogEntriesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc">
+		<wsdl:part name="errorPart" element="ns1:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/>
+	</wsdl:message>
+	<wsdl:message name="getPartiesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getParties"/>
+	</wsdl:message>
+	<wsdl:message name="getPartiesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getPartiesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getServicesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getServices"/>
+	</wsdl:message>
+	<wsdl:message name="getServicesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getServicesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="resendMessagesIn_doc">
+		<wsdl:part name="parameters" element="ns0:resendMessages"/>
+	</wsdl:message>
+	<wsdl:message name="resendMessagesOut_doc">
+		<wsdl:part name="parameters" element="ns0:resendMessagesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc">
+		<wsdl:part name="errorPart" element="ns1:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException"/>
+	</wsdl:message>
+	<wsdl:message name="getStatusDetailsIn_doc">
+		<wsdl:part name="parameters" element="ns0:getStatusDetails"/>
+	</wsdl:message>
+	<wsdl:message name="getStatusDetailsOut_doc">
+		<wsdl:part name="parameters" element="ns0:getStatusDetailsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getAllAvailableStatusDetailsIn_doc">
+		<wsdl:part name="parameters" element="ns0:getAllAvailableStatusDetails"/>
+	</wsdl:message>
+	<wsdl:message name="getAllAvailableStatusDetailsOut_doc">
+		<wsdl:part name="parameters" element="ns0:getAllAvailableStatusDetailsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getErrorCodesIn_doc">
+		<wsdl:part name="parameters" element="ns0:getErrorCodes"/>
+	</wsdl:message>
+	<wsdl:message name="getErrorCodesOut_doc">
+		<wsdl:part name="parameters" element="ns0:getErrorCodesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="getIntegrationFlowsIn_doc">
+		<wsdl:part name="parameters" element="ns0:getIntegrationFlows"/>
+	</wsdl:message>
+	<wsdl:message name="getIntegrationFlowsOut_doc">
+		<wsdl:part name="parameters" element="ns0:getIntegrationFlowsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:message name="failEoioMessageIn_doc">
+		<wsdl:part name="parameters" element="ns0:failEoioMessage"/>
+	</wsdl:message>
+	<wsdl:message name="failEoioMessageOut_doc">
+		<wsdl:part name="parameters" element="ns0:failEoioMessageResponse"/>
+	</wsdl:message>
+	<wsdl:message name="failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc">
+		<wsdl:part name="errorPart" element="ns1:failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException"/>
+	</wsdl:message>
+	<wsdl:portType name="AdapterMessageMonitoringVi">
+		<wsdl:operation name="getPredecessorMessageId">
+			<wsdl:input message="tns:getPredecessorMessageIdIn_doc"/>
+			<wsdl:output message="tns:getPredecessorMessageIdOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getPredecessorMessageId_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getMessagesWithSuccessors">
+			<wsdl:input message="tns:getMessagesWithSuccessorsIn_doc"/>
+			<wsdl:output message="tns:getMessagesWithSuccessorsOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessagesWithSuccessors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getMessagesByIDs">
+			<wsdl:input message="tns:getMessagesByIDsIn_doc"/>
+			<wsdl:output message="tns:getMessagesByIDsOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessagesByIDs_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="cancelMessages">
+			<wsdl:input message="tns:cancelMessagesIn_doc"/>
+			<wsdl:output message="tns:cancelMessagesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:cancelMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getConnections">
+			<wsdl:input message="tns:getConnectionsIn_doc"/>
+			<wsdl:output message="tns:getConnectionsOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getConnections_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getInterfaces">
+			<wsdl:input message="tns:getInterfacesIn_doc"/>
+			<wsdl:output message="tns:getInterfacesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getInterfaces_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getUserDefinedSearchAttributes">
+			<wsdl:input message="tns:getUserDefinedSearchAttributesIn_doc"/>
+			<wsdl:output message="tns:getUserDefinedSearchAttributesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getUserDefinedSearchAttributes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getUserDefinedSearchFilters">
+			<wsdl:input message="tns:getUserDefinedSearchFiltersIn_doc"/>
+			<wsdl:output message="tns:getUserDefinedSearchFiltersOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchFilters_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getUserDefinedSearchExtractors">
+			<wsdl:input message="tns:getUserDefinedSearchExtractorsIn_doc"/>
+			<wsdl:output message="tns:getUserDefinedSearchExtractorsOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchExtractors_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getMessageBytesJavaLangStringBoolean">
+			<wsdl:input message="tns:getMessageBytesJavaLangStringBooleanIn_doc"/>
+			<wsdl:output message="tns:getMessageBytesJavaLangStringBooleanOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getMessageBytesJavaLangStringBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getMessageBytesJavaLangStringIntBoolean">
+			<wsdl:input message="tns:getMessageBytesJavaLangStringIntBooleanIn_doc"/>
+			<wsdl:output message="tns:getMessageBytesJavaLangStringIntBooleanOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getMessageBytesJavaLangStringIntBoolean_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getMessageList">
+			<wsdl:input message="tns:getMessageListIn_doc"/>
+			<wsdl:output message="tns:getMessageListOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessageList_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getLoggedMessageBytes">
+			<wsdl:input message="tns:getLoggedMessageBytesIn_doc"/>
+			<wsdl:output message="tns:getLoggedMessageBytesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getLoggedMessageBytes_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getUserDefinedSearchMessages">
+			<wsdl:input message="tns:getUserDefinedSearchMessagesIn_doc"/>
+			<wsdl:output message="tns:getUserDefinedSearchMessagesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getUserDefinedSearchMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getMessagesByKeys">
+			<wsdl:input message="tns:getMessagesByKeysIn_doc"/>
+			<wsdl:output message="tns:getMessagesByKeysOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getMessagesByKeys_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getLogEntries">
+			<wsdl:input message="tns:getLogEntriesIn_doc"/>
+			<wsdl:output message="tns:getLogEntriesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:getLogEntries_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getParties">
+			<wsdl:input message="tns:getPartiesIn_doc"/>
+			<wsdl:output message="tns:getPartiesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getParties_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getServices">
+			<wsdl:input message="tns:getServicesIn_doc"/>
+			<wsdl:output message="tns:getServicesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getServices_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="resendMessages">
+			<wsdl:input message="tns:resendMessagesIn_doc"/>
+			<wsdl:output message="tns:resendMessagesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException" message="tns:resendMessages_com.sap.aii.mdt.server.adapterframework.ws.InvalidKeyException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getStatusDetails">
+			<wsdl:input message="tns:getStatusDetailsIn_doc"/>
+			<wsdl:output message="tns:getStatusDetailsOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getAllAvailableStatusDetails">
+			<wsdl:input message="tns:getAllAvailableStatusDetailsIn_doc"/>
+			<wsdl:output message="tns:getAllAvailableStatusDetailsOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getAllAvailableStatusDetails_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getErrorCodes">
+			<wsdl:input message="tns:getErrorCodesIn_doc"/>
+			<wsdl:output message="tns:getErrorCodesOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getErrorCodes_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="getIntegrationFlows">
+			<wsdl:input message="tns:getIntegrationFlowsIn_doc"/>
+			<wsdl:output message="tns:getIntegrationFlowsOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:getIntegrationFlows_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+		<wsdl:operation name="failEoioMessage">
+			<wsdl:input message="tns:failEoioMessageIn_doc"/>
+			<wsdl:output message="tns:failEoioMessageOut_doc"/>
+			<wsdl:fault name="com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException" message="tns:failEoioMessage_com.sap.aii.mdt.server.adapterframework.ws.OperationFailedException_doc"/>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>
